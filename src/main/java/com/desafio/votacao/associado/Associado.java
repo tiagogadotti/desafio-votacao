@@ -16,7 +16,5 @@ public class Associado {
     @Embedded
     private CPF cpf;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<Voto> votos;
 }
 

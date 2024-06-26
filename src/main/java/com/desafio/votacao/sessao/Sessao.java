@@ -1,12 +1,14 @@
-package com.desafio.votacao.votacao;
+package com.desafio.votacao.sessao;
 
 import com.desafio.votacao.pauta.Pauta;
+import com.desafio.votacao.voto.Voto;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
-public class Votacao {
+public class Sessao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,5 +20,7 @@ public class Votacao {
 
     private Integer minutosDuracao;
 
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Voto> votos;
 
 }

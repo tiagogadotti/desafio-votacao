@@ -17,7 +17,4 @@ public class Pauta {
     @Column(nullable = false)
     private String descricao;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Voto> votos;
-
 }

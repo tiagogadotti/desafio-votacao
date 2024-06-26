@@ -17,7 +17,5 @@ public class Voto {
     @ManyToOne
     private Associado associado;
 
-    @ManyToOne
-    private Pauta pauta;
 
 }
